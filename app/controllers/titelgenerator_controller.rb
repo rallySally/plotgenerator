@@ -1,0 +1,2 @@
+class TitelgeneratorController < ApplicationController
+end
