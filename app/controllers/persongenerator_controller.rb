@@ -4,14 +4,19 @@ class PersongeneratorController < ApplicationController
 
   def index
 
-    @person = Person.find(1);
+    @names = Name.where(isSurname: false)
+    @surnames = Name.where(isSurname: true)
+    $pickedName = @names[rand(@names.count())]
+    @nameCount = Name.where(isSurname: false).count();
+    @genders = ["","männlich","weiblich"]
+    @colors = ["blass","hell","gebräunt","dunkel","kotz grün","schweinchen rosa", "Kellerbräune"]
+    @hairstyles = ["Lange Mähne", "Kurzer Igel","Undercut","Affro","Vokuhila","schulterlang","Pferdeschwanz","Glatze","Haarkranz","Wilde Sturmfrisur"]
 
-
-    @name = Name.where(isSurname: false).first.name + ' ' + Name.where(isSurname: true).first.name
-    @age = @person.age
-    @gender = "male"
-    @job = "Tenns"
-    @skin = @person.color
-    @hair = @person.hair
+    @name = $pickedName.name + ' ' + @surnames[rand(@surnames.count())].name
+    @age = rand(122)
+    @gender = @genders[$pickedName.gender]
+    @job = Job.find(rand(Job.count())).name
+    @skin = @colors[rand(@colors.count())]
+    @hair = @hairstyles[rand( @hairstyles.count())]
   end
 end

@@ -18,6 +18,16 @@ Job.create(:name => "Schäfer")
 #Gendindex [0 = for surnames, 1= male,2=female]
 #If more genders needed make a
 Name.create(:name => "Jürgen" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Steffen" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Hans" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Fritz" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Lars" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Klaus" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Günther" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Marcus" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Daniel" ,:isSurname => false, :gender => 1)
+Name.create(:name => "David" ,:isSurname => false, :gender => 1)
+Name.create(:name => "Chris" ,:isSurname => false, :gender => 1)
 Name.create(:name => "Schmidt" ,:isSurname => true, :gender => 0)
 
 Name.create(:name => "Kevin" ,:isSurname => false, :gender => 1)
@@ -27,6 +37,14 @@ Name.create(:name => "Julia" ,:isSurname => false, :gender => 2)
 Name.create(:name => "Müller" ,:isSurname => true, :gender => 0)
 
 Name.create(:name => "Laura" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Lisa" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Lara" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Iulia" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Marie" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Daniela" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Katrin" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Carolin" ,:isSurname => false, :gender => 2)
+Name.create(:name => "Franzi" ,:isSurname => false, :gender => 2)
 Name.create(:name => "Bommer" ,:isSurname => true, :gender => 0)
 
 
