@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Form</title>
+
+
+
+
   <style type="text/css">
 
     label {
@@ -24,44 +23,37 @@
       width: 50%;
     }
 
-    .btn_submit {
-      clear: both;
-      display: block;
+    .button {
+
+      display: inline-block;
+      margin-top: 30px;
+      border: 1px solid black;
     }
 
   </style>
 
+  <h1>Person generator</h1>
+  <div class="form1c">
+    <label>Name</label><input type="text" name="name" value="<%= @name %>" id="name"><br/>
+    <label>Age</label><input type="text" name="age" value="<%= @age %>" id="age"><br />
+    <label>Gender</label><input type="text" name="gender" value="<%= @gender %>" id="gender"><br/>
+    <label>Job </label><input type="text" name="job" value="<%= @job %>" id="job"><br />
+    <label>Skin color </label><input type="text" name="skin" value="<%= @skin %>" id="skin"><br />
+    <label>Hair length </label><input type="text" name="hair" value="<%= @hair %>" id="hairlength"><br />
+    <label>Special</label></br><input type="checkbox" name="special" value="Deaf"><%= @special %></br><input type="checkbox" name="special" value="Blind">Blind </br><input type="checkbox" name="special" value="Banana"><%= @special %><br />
+  </div>
+  <div class="form2c">
+    <label>Positive Characteristics</label><br />
+    <div class="p_char">placeholder</div>
+    <div class="p_char">placeholder</div>
+    <div class="p_char">placeholder</div>
+    <br />
+    <label>Negative Characteristics</label><br />
+    <div class="n_char">placeholder</div>
+    <div class="n_char">placeholder</div>
+    <div class="n_char">placeholder</div>
+  </div>
 
-</head>
-
-<body id="home">
-<form action="../../../vendor/assets/stylesheets" method="post" class="hform">
-  <%= form_for :persongenerator do |f| %>
-      <h1>Person generator</h1>
-      <div class="form1c">
-        <label>Name</label><input type="text" name="name" value="" id="name"><%= @name %> <br/>
-        <label>Age</label><input type="text" name="age" value="" id="age"><%= @age %> <br />
-        <label>Gender</label><input type="text" name="gender" value="" id="gender"><%= @gender %><br/>
-        <label>Job </label><input type="text" name="job" value="" id="job"><%= @job %><br />
-        <label>Skin color </label><input type="text" name="skin" value="" id="skin"><%= @skin %><br />
-        <label>Hair length </label><input type="text" name="hair" value="" id="hairlength"><%= @hairlength %><br />
-        <label>Special</label></br><input type="checkbox" name="special" value="Deaf"><%= @special %></br><input type="checkbox" name="special" value="Blind">Blind </br><input type="checkbox" name="special" value="Banana"><%= @special %><br />
-      </div>
-      <div class="form2c">
-        <label>Positive Characteristics</label><br />
-        <div id="p_char">placeholder</div>
-        <div id="p_char">placeholder</div>
-        <div id="p_char">placeholder</div>
-        <br />
-        <label>Negative Characteristics</label><br />
-        <div id="n_char">placeholder</div>
-        <div id="p_char">placeholder</div>
-        <div id="p_char">placeholder</div>
-      </div>
-
-      <%= f.submit "Create New"%>
-
-      </form>
-      </body>
-      </html>
-  <% end %>
+  <div class='button'>
+    Create New
+  </div>
