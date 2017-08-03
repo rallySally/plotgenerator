@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  resources :stories
+
+  resources :people
+
+  resources :vocabularies
+
+  resources :characteristics
+
+  resources :names
+
+  resources :jobs
+
   get 'person/index'
 
   get 'titel/index'

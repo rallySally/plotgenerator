@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  charachterOne_id: 
+  charachterTwo_id: 
+  charachterThree_id: 
+
+two:
+  title: MyString
+  charachterOne_id: 
+  charachterTwo_id: 
+  charachterThree_id: 

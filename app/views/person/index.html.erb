@@ -1,1 +1,34 @@
-<h1>Person Generator</h1>
+<div>
+  <h1>Person Generator</h1>
+  <div class='left'>
+    <div>
+      <span>Name:<%= @name %></span>
+    </div>
+    <div>
+      <span>Age:<%= @age %></span>
+    </div>
+    <div>
+      <span>Gender:<%= @gender %></span>
+    </div>
+    <div>
+      <span>Job:<%= @job %></span>
+    </div>
+    <div>
+      <span>Skincolor:<%= @color %></span>
+    </div>
+    <div>
+      <span>Hairlength:<%= @hairlength %></span>
+    </div>
+  </div>
+  <div class='right'>
+  </div>
+</div>
+
+
+ruby bin/rails generate scaffold Vocabulary word:string function:string article:string
+ruby bin/rails generate scaffold Characteristics name:string karma:integer
+ruby bin/rails generate scaffold Names name:string isSurname:boolean gender:integer
+ruby bin/rails generate scaffold Jobs name:string
+
+ruby bin/rails generate scaffold People name:string age:integer gender:integer color:string hairlength:string charOne:references charTwo:references charThree:references
+ruby bin/rails generate scaffold Story title:string charachterOne:references charachterTwo:references charachterThree:references
