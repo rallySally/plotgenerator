@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170803093254) do
+ActiveRecord::Schema.define(version: 20170803183046) do
 
   create_table "characteristics", force: :cascade do |t|
     t.string   "name"
@@ -35,11 +35,13 @@ ActiveRecord::Schema.define(version: 20170803093254) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.string   "name"
+    t.integer  "name_id"
+    t.integer  "surname_id"
+    t.integer  "job_id"
     t.integer  "age"
     t.integer  "gender"
     t.string   "color"
-    t.string   "hairlength"
+    t.string   "hair"
     t.integer  "charOne_id"
     t.integer  "charTwo_id"
     t.integer  "charThree_id"
@@ -50,19 +52,21 @@ ActiveRecord::Schema.define(version: 20170803093254) do
   add_index "people", ["charOne_id"], name: "index_people_on_charOne_id"
   add_index "people", ["charThree_id"], name: "index_people_on_charThree_id"
   add_index "people", ["charTwo_id"], name: "index_people_on_charTwo_id"
+  add_index "people", ["job_id"], name: "index_people_on_job_id"
+  add_index "people", ["name_id"], name: "index_people_on_name_id"
+  add_index "people", ["surname_id"], name: "index_people_on_surname_id"
 
   create_table "stories", force: :cascade do |t|
     t.string   "title"
-    t.integer  "charachterOne_id"
-    t.integer  "charachterTwo_id"
-    t.integer  "charachterThree_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.integer  "characterOne_id"
+    t.integer  "characterTwo_id"
+    t.integer  "characterThree_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
-  add_index "stories", ["charachterOne_id"], name: "index_stories_on_charachterOne_id"
-  add_index "stories", ["charachterThree_id"], name: "index_stories_on_charachterThree_id"
-  add_index "stories", ["charachterTwo_id"], name: "index_stories_on_charachterTwo_id"
+  add_index "stories", ["characterOne_id"], name: "index_stories_on_characterOne_id"
+  add_index "stories", ["characterTwo_id"], name: "index_stories_on_characterTwo_id"
 
   create_table "vocabularies", force: :cascade do |t|
     t.string   "word"

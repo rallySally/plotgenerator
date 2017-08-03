@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  charachterOne_id: 
-  charachterTwo_id: 
-  charachterThree_id: 
+  characterOne_id: 
+  characterTwo_id: 
+  characterThree: 
 
 two:
   title: MyString
-  charachterOne_id: 
-  charachterTwo_id: 
-  charachterThree_id: 
+  characterOne_id: 
+  characterTwo_id: 
+  characterThree: 

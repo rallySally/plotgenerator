@@ -6,12 +6,4 @@ class CreateJobs < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
-  def self.up
-      Job.create(:name => "IT-Specialist")
-      Job.create(:name => "Unemployed")
-      Job.create(:name => "Doctor")
-    end
-    def self.down
-      Job.delete_all()
-    end
 end

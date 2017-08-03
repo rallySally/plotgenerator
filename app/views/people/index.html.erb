@@ -6,10 +6,12 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Surname</th>
+      <th>Job</th>
       <th>Age</th>
       <th>Gender</th>
       <th>Color</th>
-      <th>Hairlength</th>
+      <th>Hair</th>
       <th>Charone</th>
       <th>Chartwo</th>
       <th>Charthree</th>
@@ -21,10 +23,12 @@
     <% @people.each do |person| %>
       <tr>
         <td><%= person.name %></td>
+        <td><%= person.surname %></td>
+        <td><%= person.job %></td>
         <td><%= person.age %></td>
         <td><%= person.gender %></td>
         <td><%= person.color %></td>
-        <td><%= person.hairlength %></td>
+        <td><%= person.hair %></td>
         <td><%= person.charOne %></td>
         <td><%= person.charTwo %></td>
         <td><%= person.charThree %></td>
