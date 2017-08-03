@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
   <h1>Person Generator</h1>
   <div class='left'>
@@ -32,3 +33,58 @@ ruby bin/rails generate scaffold Jobs name:string
 
 ruby bin/rails generate scaffold People name:string age:integer gender:integer color:string hairlength:string charOne:references charTwo:references charThree:references
 ruby bin/rails generate scaffold Story title:string charachterOne:references charachterTwo:references charachterThree:references
+=======
+<h1>Person</h1>
+
+<%= form_for :person do |f| %>
+<ul>
+  <li>
+    <div>
+      <p> <label>Name</label><input name="name" value="" id="name"><%= @name %><br/> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Age</label><input name="age" value="" id="age"><%= @age %> <br/></p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Gender</label><input name="gender" value="" id="gender"><%= @gender %><br/> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Skin color</label><input name="skin" value="" id="skin"><%= @skin %><br/> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p>  <label>Job </label><input type="text" name="job" value="" id="job"><%= @job %><br /> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Hair</label><input name="hair" value="" id="hairlength"><<%= @hairlength %>br/> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Special</label><input name="special" value="" id="special"><%= @special %><br/> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Bad Characteristic</label><input name="bad" value="" id="bad"><br/><%= @bad %> </p>
+    </div>
+  </li>
+  <li>
+    <div>
+      <p> <label>Good Characteristic</label><input name="good" value="" id="good"><br/><%= @good %> </p>
+    </div>
+  </li>
+</ul>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
