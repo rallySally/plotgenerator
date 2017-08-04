@@ -1,4 +1,5 @@
 class CharacteristicsController < ApplicationController
+  skip_before_action :authorize, only: [:create, :new]
   before_action :set_characteristic, only: [:show, :edit, :update, :destroy]
 
   # GET /characteristics

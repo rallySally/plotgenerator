@@ -1,4 +1,5 @@
 class PersongeneratorController < ApplicationController
+  skip_before_action :authorize
   def generator; end
 
   def index

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'sessions/new'
 
   resources :users
@@ -14,15 +15,7 @@ Rails.application.routes.draw do
 
   resources :jobs
 
-  resources :persongenerator
-
-  get 'person/index'
-
-  get 'titel/index'
-
-  get 'story/index'
-
-  root 'sessions#new'
+  root to: 'persongenerator#index'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
