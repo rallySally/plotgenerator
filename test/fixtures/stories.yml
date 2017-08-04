@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  characterOne_id: 
-  characterTwo_id: 
-  characterThree: 
+  title: Make writing novels great again.
+  characterOne_id: 1
+  characterTwo_id: 2
+  characterThree: 3
 
 two:
-  title: MyString
-  characterOne_id: 
-  characterTwo_id: 
-  characterThree: 
+  title: Time
+  characterOne_id: 4
+  characterTwo_id: 5
+  characterThree: 6

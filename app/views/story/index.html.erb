@@ -32,6 +32,10 @@
   </li>
 </ul>
 <p>
-  <%= f.submit %>
+<div>
+  <%=button_tag "save", id: "button-#{saveStory.id}"%>
+  <%f.submit%>
+    </div>
+
 </p>
 <% end %>

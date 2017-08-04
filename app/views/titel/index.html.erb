@@ -1,0 +1,16 @@
+<div class="mainContainer">
+  <h1>Titelgenerator</h1>
+  <div name="mainTitleContainer"><%= maintitle %></div>
+  <div class="oldTitles">
+    <h2>Ältere Titel</h2>
+    <ul>
+      <li><label>Old Title 1</label><%= oldtitle[0] %></li>
+      <li><label>Old Title 2</label><%= oldtitle[1] %></li>
+      <li><label>Old Title 3</label><%= oldtitle[2] %></li>
+    </ul>
+  </div>
+  <div id="createNew" class='button'>
+    <%= button_tag "Create New", id "button-#{titleGen.id}"%>
+  </div>
+</div>
+Contact GitHub API Training Shop Blog About
