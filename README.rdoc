@@ -1,7 +1,11 @@
+# SEE THE LASTEST TRAVIS BUILD STATUS:
+https://travis-ci.org/rallySally/plotgenerator.svg?branch=master
+
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Our project is will be an application that generates plots for novels. One generator will generate
+random persons or characters for the story. Another generator will generate the story’s title.
+Both generators can be used apart from each other.The application will have three views.
 
 Things you may want to cover:
 
