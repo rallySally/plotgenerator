@@ -132,3 +132,6 @@ Person.create(:age => 10,
               :charThree_id => Characteristic.find(3))
 
 Story.create(:title => "Der rote Mond", :characterOne_id => Person.find(1))
+
+User.delete_all
+User.create(name: "admin", password: "admin", password_confirmation: "admin")

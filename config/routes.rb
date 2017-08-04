@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
 
+  resources :users
   resources :stories
 
   resources :people
@@ -12,15 +14,19 @@ Rails.application.routes.draw do
 
   resources :jobs
 
+  resources :persongenerator
+
   get 'person/index'
 
   get 'titel/index'
 
   get 'story/index'
 
-  get 'persongenerator/index'
+  root 'sessions#new'
 
-  root 'persongenerator#index'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
