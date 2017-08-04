@@ -2,16 +2,28 @@
 <html>
 <head>
   <title>Plotgenerator</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= nav_bar static: :top, brand: "Plotgenerator" do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+        <%= menu_item "User", users_path %>
+        <%= menu_item "Story", people_path %>
+        <div id="admin">
+          <% if logged_in? %> Logged in as <%= link_to current_user.name, current_user %>
+              <%= link_to "Logout", logout_path, method: :delete %>
+          <% else %>
+              <%= link_to 'Log in', login_path %>
+          <% end %>
+        </div>
+
+    <% end %>
+<% end %>
 
 <%= yield %>
-<hr/>Plotgenerator Application -
-<% if logged_in? %> Logged in as <%= link_to current_user.name, current_user %>
-    <%= link_to "Logout", logout_path, method: :delete %>
-<% else %> <%= link_to 'Log in', login_path %><% end %>
+
 </body>
 </html>
